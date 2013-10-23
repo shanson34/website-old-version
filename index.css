@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#DS
+{
+  display: block;
+  width: 1500px;
+  height:480px;
+  background: url("img/DesignSprite.jpg") no-repeat 0 0;
+
+}
+
+#DS:hover
+{ 
+  background-position: -1500px 0px;
+}
+
+#DS span
+{
+  position: absolute;
+  top: -999em;
+}
+ 
+ #BS
+{
+  display: block;
+  width: 1500px;
+  height:476px;
+  background: url("img/BioSprite.jpg") no-repeat 0 0;
+
+}
+
+#BS:hover
+{ 
+  background-position: -1505px 0px;
+}
+
+#BS span
+{
+  position: absolute;
+  top: -999em;
+}
+
+ 
+ #RS
+{
+  display: block;
+  width: 1500px;
+  height:515px;
+  background: url("img/ResumeSprite.jpg") no-repeat 0 0;
+
+}
+
+#RS:hover
+{ 
+  background-position: -1500px 0px;
+}
+
+#RS span
+{
+  position: absolute;
+  top: -999em;
+}

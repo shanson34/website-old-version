@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- I am using a tutorial and it's ensuing code for this LIGHTBOX thing. It's apparently all the rage. Here's the link: http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/super-simple-lightbox-with-css-and-jquery/
+I'm keeping all the comments made by the tutorial/code creator for my own benefit; I'd like to know what EXACTLY everything is that I'm fiddling with. -->
+<html>
+   <head>
+  <LINK REL=StyleSheet HREF="lightbox.css" TYPE="text/css">  
+  <LINK REL=StyleSheet HREF="navigation.css" TYPE="text/css">
+ <link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+        <title>DESIGN!</title>
+   </head>
+<body>
+<div id="page">
+<div id="wrapper">
+<style>
+h1{
+	font-family: 'Righteous', cursive;
+}
+</style>
+<div class= "outer">
+    	<div class= "inner">
+<h1>DESIGN!</h1>
+    
+       
+                <a href="img/DrawTheLinePoster.jpg" class="lightbox_trigger">
+                <img src="img/DrawTheLinePoster.jpg" height="200px" width="125px"/>
+                </a>
+            
+                <a href="img/Poster.jpg" class="lightbox_trigger">
+                <img src="img/Poster.jpg" height="200px" width="125px"/>
+                </a>
+            
+                <a href="img/zombiecolor.jpg" class="lightbox_trigger">
+                <img src="img/zombiecolor.jpg" height="200px" width="125px"/>
+                </a>
+          
+                <a href="img/Angler.jpg" class="lightbox_trigger">
+                <img src="img/Angler.jpg" height="200px" width="260px"/>
+                </a>
+           
+                <a href="img/Zipper_edited.jpg" class="lightbox_trigger">
+                <img src="img/Zipper_edited.jpg" height="200px" width="125px"/>
+                </a>
+      </div></div>
+     
+</div>  
+<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script>
+jQuery(document).ready(function($) {
+ 
+    $('.lightbox_trigger').click(function(e) {
+ 
+        //prevent default action (hyperlink)
+        e.preventDefault();
+ 
+        //Get clicked link href
+        var image_href = $(this).attr("href");
+ 
+        /*
+        If the lightbox window HTML already exists in document,
+        change the img src to to match the href of whatever link was clicked
+ 
+        If the lightbox window HTML doesn't exists, create it and insert it.
+        (This will only happen the first time around)
+        */
+ 
+        if ($('#lightbox').length > 0) { // #lightbox exists
+ 
+            //place href as img src value
+            $('#content').html('<img src="' + image_href + '" />');
+ 
+            //show lightbox window - you could use .show('fast') for a transition
+            $('#lightbox').show();
+        }
+ 
+        else { //#lightbox does not exist - create and insert (runs 1st time only)
+ 
+            //create HTML markup for lightbox window
+            var lightbox =
+            '<div id="lightbox">' +
+                '<p>Click to close</p>' +
+                '<div id="content">' + //insert clicked link's href into img src
+                    '<img src="' + image_href +'" />' +
+                '</div>' +
+            '</div>';
+ 
+            //insert lightbox HTML into page
+            $('body').append(lightbox);
+        }
+ 
+    });
+ 
+    //Click anywhere on the page to get rid of lightbox window
+    $('#lightbox').live('click', function() { //must use live, as the lightbox element is inserted into the DOM WE WERE LEARNING ABOUT THIS IN CLASS EARLIER! THIS IS EXCITING FOR ME!
+        $('#lightbox').hide();
+    });
+ 
+});
+
+</script>
+</div>
+<div></div>
+<div id="menu">
+<div id="fixeddiv" style="  
+    position:absolute;  
+    list-style:none;  
+    > 
+  
+    <ul id="nav">
+         <div class= "outer">
+    	<div class= "inner"> 
+        <li ><a href="design.html" id="design"></a></li>
+         </div>
+    	</div>
+        <div class= "outer">
+    	<div class= "inner">
+        <li><a href="resume.html" id="resume"></a></li>
+        </div>
+    	</div>
+        <div class= "outer">
+    	<div class= "inner">
+        <li><a href="bio.html" id="bio"></a></li>
+        </div>
+    	</div>
+    </ul>
+   

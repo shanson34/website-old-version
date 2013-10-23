@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/* CSS Document */
+ul li{
+	list-style:none;
+	float:left;
+	
+}
+#fixeddiv{
+	width:90px;
+	padding-top:100px;
+	padding-left:35px;
+	
+	
+}
+
+#design
+{
+  display: block;
+  width: 75px;
+  height: 50px;
+  background: url("img/sprite1_1.jpg") no-repeat 0 0;
+
+}
+
+#design:hover
+{ 
+  background-position: -75px 0px;
+}
+
+#design span
+{
+  position: absolute;
+  top: -999em;
+}
+
+#resume
+{
+  display: block;
+  width: 75px;
+  height: 124px;
+  background: url("img/sprite3_3.jpg") no-repeat 0 0;
+
+
+}
+
+#resume:hover
+{ 
+  background-position: -75px 0px;
+}
+
+#resume span
+{
+  position: absolute;
+  top: -999em;
+}
+
+#bio
+{
+  display: block;
+  width: 75px;
+  height: 156px;
+  background: url("img/sprite2_2.jpg") no-repeat 0 0;
+
+}
+
+#bio:hover
+{ 
+  background-position: -75px 0px;
+}
+
+#bio span
+{
+  position: absolute;
+  top: -999em;
+}
+.outer{
+	border: solid black 1px;
+}
+
+.inner{
+	border: solid black 1px;
+	margin: 5px;
+}
+
+#BioComic{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#ResumeComic{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+html {background: url(img/dot.jpg) reapeat;}
+
+body {margin:0; padding:0 10px 0 10px; border:0; height:100%; overflow-y:auto; background:url(img/dot.jpg) repeat;}
+
+#page {margin:10px 10px 20px 150px; border: double 10px;background:#ffffff; padding:50px; background: url(img/dot2.jpg) repeat;}
+
+#menu {display:block; top:10px; left:10px; width:75px; position:fixed;}
+
+* html #menu {position:absolute;}
